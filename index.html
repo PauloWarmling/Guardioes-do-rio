@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quiz de Meio Ambiente">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz de Meio Ambiente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+        }
+        .options {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Quiz de Meio Ambiente</h1>
+        <div id="quiz">
+            <p id="question">Pergunta aqui</p>
+            <div id="options" class="options"></div>
+        </div>
+
+        <div class="result">
+            <p>Pontuação: <span id="score">0</span></p>
+        </div>
+
+        <button id="resetButton" onclick="resetQuiz()">Resetar</button>
+        <button id="mainMenuButton" onclick="goToMainMenu()">Voltar à Tela Principal</button>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                question: "O que é a sustentabilidade ambiental?",
+                options: [
+                    "Uso de recursos naturais de forma que satisfaça as necessidades do presente.",
+                    "Uso ilimitado de recursos naturais.",
+                    "Aumento da poluição.",
+                    "Desmatamento e urbanização."
+                ],
+                answer: 0 // índice da resposta correta
+            },
+            {
+                question: "O que é aquecimento global?",
+                options: [
+                    "Redução da temperatura média da Terra.",
+                    "Aumento gradual da temperatura média da Terra.",
+                    "Desmatamento de florestas.",
+                    "Mudança nas estações do ano."
+                ],
+                answer: 1
+            },
+            {
+                question: "Quais são os principais gases responsáveis pelo efeito estufa?",
+                options: [
+                    "Oxigênio e nitrogênio.",
+                    "Dióxido de carbono e metano.",
+                    "Hélio e hidrogênio.",
+                    "Vapor d'água e ozônio."
+                ],
+                answer: 1
+            },
+            {
+                question: "O que é desmatamento e quais suas consequências?",
+                options: [
+                    "Plantação de árvores.",
+                    "Remoção massiva de árvores.",
+                    "Aumento da biodiversidade.",
+                    "Conservação dos ecossistemas."
+                ],
+                answer: 1
+            },
+            {
+                question: "Como a poluição dos oceanos afeta a vida marinha?",
+                options: [
+                    "Melhora a qualidade da água.",
+                    "Causa enredamento e ingestão de resíduos tóxicos.",
+                    "Não tem impacto significativo.",
+                    "Aumenta a quantidade de peixes."
+                ],
+                answer: 1
+            },
+            {
+                question: "O que é a reciclagem e por que é importante?",
+                options: [
+                    "Descarte de materiais.",
+                    "Processo de reusar materiais para criar novos produtos.",
+                    "Produção de mais lixo.",
+                    "Queima de resíduos."
+                ],
+                answer: 1
+            },
+            {
+                question: "Qual é o impacto da agricultura no meio ambiente?",
+                options: [
+                    "Desmatamento e poluição por pesticidas.",
+                    "Não há impacto.",
+                    "Aumenta a biodiversidade.",
+                    "Conserva recursos naturais."
+                ],
+                answer: 0
+            },
+            {
+                question: "O que é energia renovável e cite exemplos.",
+                options: [
+                    "Fontes que se esgotam rapidamente.",
+                    "Fontes que se regeneram, como solar e eólica.",
+                    "Fontes de energia nuclear.",
+                    "Combustíveis fósseis."
+                ],
+                answer: 1
+            },
+            {
+                question: "O que são espécies ameaçadas de extinção?",
+                options: [
+                    "Espécies que estão se multiplicando.",
+                    "Espécies com população em declínio.",
+                    "Espécies que são abundantes.",
+                    "Espécies que vivem apenas em cativeiro."
+                ],
+                answer: 1
+            },
+            {
+                question: "Como o consumo consciente pode ajudar a proteger o meio ambiente?",
+                options: [
+                    "Aumentando o desperdício.",
+                    "Minimizando o impacto ambiental.",
+                    "Comprando mais produtos descartáveis.",
+                    "Desmatando áreas para novas construções."
+                ],
+                answer: 1
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        function loadQuestion() {
+            const questionElement = document.getElementById('question');
+            const optionsElement = document.getElementById('options');
+            const current = questions[currentQuestion];
+
+            questionElement.textContent = current.question;
+            optionsElement.innerHTML = '';
+
+            current.options.forEach((option, index) => {
+                const button = document.createElement('button');
+                button.textContent = option;
+                button.onclick = () => checkAnswer(index);
+                optionsElement.appendChild(button);
+            });
+        }
+
+        function checkAnswer(selectedIndex) {
+            if (selectedIndex === questions[currentQuestion].answer) {
+                score++;
+            }
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                loadQuestion();
+            } else {
+                endQuiz();
+            }
+            document.getElementById('score').textContent = score;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            document.getElementById('score').textContent = score;
+            loadQuestion();
+        }
+
+        function endQuiz() {
+            const quiz = document.getElementById('quiz');
+            quiz.innerHTML = "<h2>Você completou o quiz! Pontuação final: " + score + "</h2>";
+        }
+
+        function goToMainMenu() {
+            alert('Voltando à tela principal...');
+        }
+
+        loadQuestion();
+    </script>
+
+</body>
+</html>
