@@ -40,8 +40,20 @@
         .result {
             margin-top: 20px;
         }
-        .options {
+        .options,
+        .controls {
             margin: 10px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .options > * {
+            width: 100%;
+        }
+
+        .controls > * {
+            width: calc(50% - 50px);
         }
     </style>
 </head>
@@ -55,8 +67,10 @@
         <div class="result">
             <p>Pontuação: <span id="score">0</span></p>
         </div>
-        <button id="resetButton" onclick="resetQuiz()">Resetar</button>
-        <button id="mainMenuButton" onclick="goToMainMenu()">Voltar à Tela Principal</button>
+        <div class="controls">
+            <button id="resetButton" onclick="resetQuiz()">Resetar</button>
+            <button id="mainMenuButton" onclick="goToMainMenu()">Voltar à Tela Principal</button>
+        </div>
     </div>
     <script>
         const questions = [
