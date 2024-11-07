@@ -69,7 +69,7 @@
         </div>
         <div class="controls">
             <button id="resetButton" onclick="resetQuiz()">Resetar</button>
-            <button id="mainMenuButton" onclick="goToMainMenu()">Voltar à Tela Principal</button>
+            <button onclick="location.href='home.html'">Voltar para a Página Inicial</button>
         </div>
     </div>
     <script>
@@ -212,9 +212,8 @@
             const quiz = document.getElementById('quiz');
             quiz.innerHTML = "<h2>Você completou o quiz! Pontuação final: " + score + "</h2>";
         }
-        function goToMainMenu() {
-            alert('Voltando à tela principal...');
-        }
+        
+        
         loadQuestion();
     </script>
 </body>
