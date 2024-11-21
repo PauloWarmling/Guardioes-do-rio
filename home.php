@@ -14,10 +14,16 @@
         <h2>Álbum de Figurinhas</h2>
         <div class="figurinhas">
             <?php for($i = 1; $i <= 24; $i++):?>
-                <div class="figurinha" onclick="revelarFigurinha(<?=$i?>)">Figurinha <?=$i?></div>
+                <div class="figurinha" onclick="revelarFigurinha(<?=$i?>)">
+                    <div class="front">?</div>
+                    <div class="back">
+                        <img src="assets/images/figurinha<?=$i?>.png" alt="Figurinha <?=$i?>">
+                    </div>
+                </div>
            <?php endfor; ?>
         </div>
         <button onclick="location.href='index.php'">Voltar</button>
     </section>
+    <script src="assets/js/index.js"></script>
 </body>
 </html>
