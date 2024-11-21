@@ -15,31 +15,41 @@
 <body>
     <div class="container">
         <main>
-            <section class='intro'>
-                
-            </section>
-            
-            <section class="left-right-container">
-                <div class="left">
-                    <h2>Descobrindo o problema...</h2>
-                    <p>O acúmulo de lixo nos locais errados e principalmente próximo aos rios, contribui, e muito, para possíveis enchentes nas épocas chuvosas. Esses descartes inadequados geram prejuízos futuros que poderiam ser evitados se houvesse uma conscientização da forma correta.</p>
+            <h1>Guardiões do Rio</h1>
+
+            <section class='content intro'>
+                <div class="left-right-container">
+                    <div class="left">
+                        <h2>Descobrindo o problema...</h2>
+                        <p>O acúmulo de lixo nos locais errados e principalmente próximo aos rios, contribui, e muito, para possíveis enchentes nas épocas chuvosas. Esses descartes inadequados geram prejuízos futuros que poderiam ser evitados se houvesse uma conscientização da forma correta.</p>
+                    </div>
+                    <div class="right">
+                        <img src="./assets/images/img.webp" alt="Imagem Poluição no rio">
+                    </div> 
                 </div>
-                <div class="right">
-                    <img src="./assets/images/img.webp" alt="Imagem Poluição no rio">
-                </div>            
+                <div class="bloco-2">
+                    <h2>De que modo esperamos solucionar este problema?</h2>
+                    <p>Através de uma conscientização feita com as crianças nas escolas. Por meio de um álbum de figurinhas.</p>
+                </div>
+
+                <div class="bloco-3">
+                    <h2>Qual a ideia do projeto?</h2>
+                    <p>As escolas juntamente com a Prefeitura e Defesa Civil, criarão um álbum de figurinhas relacionado aos temas que precisam ser abordados.
+                    Por meio de um projeto anual que aborda diferentes temas a cada ano que sejam leves, de fácil entendimento e atrativos para as crianças.
+                    Pois assim, as mesmas poderão compreender melhor situações negativas que as cercam, e que com atos conscientes podem mudar como elas irão atingir a comunidade.</p>
+                </div>
+
             </section>
             
-            <section class="content">
-                <h2>De que modo esperamos solucionar este problema?</h2>
-                <p>Através de uma conscientização feita com as crianças nas escolas. Por meio de um álbum de figurinhas.</p>
-            </section>
+                
+
+
+            <div class="callToAction">
+                <button onclick="location.href='home.php'">Ver Álbum</button>
+            </div>
         </main>
+
     </div>
 
-    <div class="container">
-        <div class="callToAction">
-            <button onclick="location.href='home.php'">Ver Álbum</button>
-        </div>
-    </div>
 </body>
 </html>

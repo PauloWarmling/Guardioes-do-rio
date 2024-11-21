@@ -1,0 +1,30 @@
+.album-container {
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.figurinhas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.figurinha {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #333;
+}
+
+.figurinha.revelada {
+    background-color: #4caf50;
+    color: #fff;
+}

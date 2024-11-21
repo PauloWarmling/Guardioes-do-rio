@@ -3,9 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+p {
+    color: #63797e;
+    font-size: 18px;
+}
+
+h2 {
+    color: #507875;
+    font-size: 25px;
+}
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
     background-color: #f0f0f0;
@@ -40,8 +48,16 @@ main section {
 }
 
 main .intro {
-    
+    width: 100%;
 }
+
+.intro h1 {
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 30px;
+}
+
+main
 
 main .left-right-container {
     display: flex;
@@ -53,14 +69,6 @@ main .left-right-container {
     width: 45%;
 }
 
-.left p {
-    color: #63797e;
-}
-.left h2 {
-    color: #507875;
-    font-size: 31px;
-}
-
 .left-right-container .right {
     width: 45%;
 }
@@ -69,48 +77,10 @@ main .left-right-container {
     width: 100%;
 
     height: auto;
-    fit-content: contain;
+    object-fit: contain;
     border-radius: 20px;
 }
 
-.content p {
-    text-align: center;
-}
-
-.album-container {
-    text-align: center;
-    width: 80%;
-    max-width: 600px;
-    margin: auto;
-}
-
-h1 {
-    margin-bottom: 20px;
-}
-
-.figurinhas {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-
-.figurinha {
-    width: 100px;
-    height: 100px;
-    background-color: #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #555;
-    font-weight: bold;
-    cursor: pointer;
-    border: 2px solid #333;
-}
-
-.figurinha.revelada {
-    background-color: #4caf50;
-    color: #fff;
-}
 
 .callToAction h1 {
     color: #4CAF50;
@@ -131,4 +101,14 @@ h1 {
 }
 .callToAction button:hover {
     background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    main .left-right-container {
+        row-gap: 30px;
+        justify-content: center;
+    }
+    .left-right-container .left, .left-right-container .right {
+        width: 100%;
+    }
 }

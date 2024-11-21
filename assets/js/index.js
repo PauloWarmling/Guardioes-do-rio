@@ -9,5 +9,4 @@ document.addEventListener('DOMContentLoaded', function () {
             alert(`Figurinha ${numero} já foi desbloqueada!`);
         }
     }
-    
 });
