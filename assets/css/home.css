@@ -71,7 +71,6 @@ button:disabled {
 .figurinha {
     width: 100px;
     height: 100px;
-<<<<<<< HEAD
     background-color: #bdc3c7;
     border: 1px solid #7f8c8d;
     border-radius: 5px;
@@ -105,7 +104,6 @@ button:disabled {
 .figurinha .back {
     background-color: #ecf0f1;
     transform: rotateY(180deg); /* A parte de trás começa virada para trás */
-=======
     background-color: gray;
     color: white;
     display: flex;
@@ -116,7 +114,6 @@ button:disabled {
     transition: transform 0.6s;
     transform-style: preserve-3d;
     position: relative;
->>>>>>> 1941b60a62b4607bdd113ae2369c65cddbb85184
 }
 
 .figurinha .front,
@@ -144,7 +141,6 @@ button:disabled {
 
 
 .figurinha.revelada {
-<<<<<<< HEAD
     transform: rotateY(180deg); /* Gira a figurinha quando revelada */
 }
 
@@ -197,7 +193,3 @@ button:disabled {
         height: 80px;
     }
 }
-=======
-    transform: rotateY(180deg);
-}
->>>>>>> 1941b60a62b4607bdd113ae2369c65cddbb85184

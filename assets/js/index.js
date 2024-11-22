@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-<<<<<<< HEAD
     // Seletores principais
     const paginas = document.querySelectorAll('.pagina');
     const totalPaginas = paginas.length;
@@ -70,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Inicializa a página e eventos
     atualizarPagina(); // Mostra a primeira página
     adicionarEventoFigurinhas(); // Ativa as figurinhas
-=======
+
     const figurinhas = document.querySelectorAll('.figurinhas .figurinha');
 
     function revelarFigurinha(figurinha) {
@@ -88,5 +87,4 @@ document.addEventListener('DOMContentLoaded', function () {
             revelarFigurinha(figurinha);
         });
     });
->>>>>>> 1941b60a62b4607bdd113ae2369c65cddbb85184
 });
