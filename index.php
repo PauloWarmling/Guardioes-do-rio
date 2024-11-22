@@ -18,13 +18,13 @@
             <h1>Guardiões do Rio</h1>
 
             <section class='content intro'>
-                <div class="left-right-container">
+                <div class="bloco-1 left-right-container">
                     <div class="left">
                         <h2>Descobrindo o problema...</h2>
                         <p>O acúmulo de lixo nos locais errados e principalmente próximo aos rios, contribui, e muito, para possíveis enchentes nas épocas chuvosas. Esses descartes inadequados geram prejuízos futuros que poderiam ser evitados se houvesse uma conscientização da forma correta.</p>
                     </div>
                     <div class="right">
-                        <img src="./assets/images/img.webp" alt="Imagem Poluição no rio">
+                        <img src="./assets/images/poluicao.webp" alt="Imagem Poluição no rio">
                     </div> 
                 </div>
                 <div class="bloco-2">
@@ -39,17 +39,26 @@
                     Pois assim, as mesmas poderão compreender melhor situações negativas que as cercam, e que com atos conscientes podem mudar como elas irão atingir a comunidade.</p>
                 </div>
 
+                <div class="bloco-4">
+                    <h2>Como vai funcionar?</h2>
+                    <p>Os alunos receberão o álbum da escola.
+                    Toda segunda-feira, em troca de uma sacola de lixo, ganharão um pacote de figurinhas de 5 unidades para completar ou trocar com os colegas num prazo de 6 meses.
+                    Cada álbum terá 5 páginas, sendo 5 figurinhas por página, totalizando 25 figurinhas.</p>
+                </div>
+
+                <div class="bloco-5 left-right-container">
+                    <div class="left">
+                        <h2>Premiação da Campanha</h2>
+                        <p>E após o fim da campanha, quem completar o álbum recebe uma muda de uma planta, para participar de um passeio na cidade para realizar o seu plantio em uma área verde, incluindo um lanche para os participantes custeado pela campanha</p>
+                    </div>
+                    <div class="right">
+                        <img src="assets/images/planta.webp" alt="Foto planta">
+                    </div>
+                </div>
             </section>
             
-                
-
-
-            <div class="callToAction">
-                <button onclick="location.href='home.php'">Ver Álbum</button>
-            </div>
+            <button onclick="location.href='home.php'">Ver Álbum</button>
         </main>
-
     </div>
-
 </body>
 </html>

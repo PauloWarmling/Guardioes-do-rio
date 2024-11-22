@@ -27,6 +27,10 @@ body {
     font-family: poppins, 'sans-serif';
 }
 
+main {
+    width: 100%;
+}
+
 .container {
     width: 1024px;
     margin: 0 auto;
@@ -54,15 +58,26 @@ main .intro {
 .intro h1 {
     margin: 0 auto;
     width: fit-content;
+    color: #2c3e50;
     font-size: 30px;
+    text-align: center;
 }
 
-main
+main .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.content > div {
+    width: 100%;
+}
 
 main .left-right-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
 }
 
 .left-right-container .left {
@@ -82,27 +97,26 @@ main .left-right-container {
 }
 
 
-.callToAction h1 {
-    color: #4CAF50;
-}
-.callToAction p {
-    margin-top: 20px;
-    color: #555;
-}
-.callToAction button {
+
+button {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 20px;
     border-radius: 4px;
+    width: fit-content;
+    margin: 0 auto;
 }
-.callToAction button:hover {
+button:hover {
     background-color: #45a049;
 }
-
+@media (max-width: calc(1024px + 50px)) {
+    .container {
+        width: calc(100% - 40px);
+    }
+}
 @media (max-width: 768px) {
     main .left-right-container {
         row-gap: 30px;
