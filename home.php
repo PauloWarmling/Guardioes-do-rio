@@ -11,10 +11,19 @@
 <body>
     <section class="album-container">
         <h2>Álbum de Figurinhas</h2>
-        <div class="figurinhas">
-            <?php for($i = 1; $i <= 24; $i++):?>
-                <div class="figurinha" onclick="revelarFigurinha(<?=$i?>)">Figurinha <?=$i?></div>
-           <?php endfor; ?>
+        <div id="paginas">
+            <?php for ($pagina = 1; $pagina <= 5; $pagina++): ?>
+                <div class="pagina" data-pagina="<?=$pagina?>">
+                    <?php for ($i = ($pagina - 1) * 5 + 1; $i <= $pagina * 5; $i++): ?>
+                        <div class="figurinha" data-id="<?=$i?>">
+                            <div class="front">?</div>
+                            <div class="back">
+                                <img src="assets/images/figurinhas/figurinha<?=$i?>.png" alt="Figurinha <?=$i?>">
+                            </div>
+                        </div>
+                    <?php endfor; ?>
+                </div>
+            <?php endfor; ?>
         </div>
         <div class="navegacao">
             <button id="anterior">Anterior</button>
@@ -22,6 +31,6 @@
             <button id="proximo">Próximo</button>
         </div>
         <button onclick="location.href='index.php'">Voltar</button>
-    </section>
+    <script src="assets/js/index.js"></script>
 </body>
 </html>
